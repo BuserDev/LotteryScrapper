@@ -1,0 +1,1622 @@
+var request = require('request');
+var cheerio = require('cheerio'), cheerioTableparser = require('cheerio-tableparser');;
+const fs = require('fs');
+
+request('http://www.calottery.com/play/scratchers-games/$5-scratchers/pure-gold-1287', function (error, response, html) {
+  if (!error && response.statusCode == 200) {
+    var data;
+    var $ = cheerio.load(html);
+
+    var title, release, rating;
+    var json = { title : "", release : "", rating : ""};
+    data = $('.table.draw_games.tag_even')
+    /*$('.table.draw_games.tag_even').filter(function(){
+      var data = $(this);
+      //title = data.children();
+
+      //$ = cheerio.load($(this));
+
+      //cheerioTableparser($);
+      //data = $("#complex").parsetable(true, true, true);
+      //title = data.children().first().text().trim();
+      //release = data.children().last().children().last().text().trim();
+
+      //json.title = title;
+      //json.release = release;
+    })
+
+    /*$('.ratingValue').filter(function(){
+      var data = $(this);
+      rating = data.text().trim();
+
+      json.rating = rating;
+    })*/
+    //data = $('table.draw_games.tag_even')
+    fs.writeFile('Test.txt', data, function (err) {
+      if (err) return console.log(err);
+    });
+  }
+});
+
+function GetData (Scrape) {
+  return Scrape;//Scrape.lastIndexOf("<tbody>");
+}
+
+/*
+
+const options = {
+  uri: `http://www.calottery.com/play/scratchers-games/$5-scratchers/pure-gold-1287`,
+  transform: function (body) {
+    return cheerio.load(body);
+  }
+};
+
+rp(options)
+  .then(($) => {
+
+
+  })
+  .catch((err) => {
+    console.log(err);
+  });*/
+
+
+<!DOCTYPE html>
+
+<script type='text/javascript' src="http://static.www.calottery.com/build/js/plugins/bowser.min.js"></script>
+<!--[if lt IE 7 ]> <html class="ie6 ie ielt10 ielt9 ielt8 ielt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ie ielt10 ielt9 ielt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ie ielt10 ielt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 ie ielt10 no-js" lang="en"> <![endif]-->
+<!--[if IE 10 ]>    <html class="ie10 ie no-js" lang="en"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html class='no-js' lang='en'>
+<!--<![endif]-->
+<head><meta charset="utf-8" /><title>
+	
+        Pure Gold (1287)
+</title><meta content="Official site for California Lottery" name="description" /><meta content="width=device-width" name="viewport" /><link href='/css/secondchance.css' rel='stylesheet' /><meta name='keywords' content=''/><link rel="shortcut icon" href="/favicon.ico" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /> -->
+    <link href="http://static.www.calottery.com/css/jquery.loading-indicator.css" rel="stylesheet" />
+    <!--
+      Bootstrap JavaScript
+      Modernizr bundled with RequireJS & the optional RequireJS plugins
+    -->
+    <script type="text/javascript" src="http://static.www.calottery.com/build/js/swfobject.js"></script>
+    <script type='text/javascript' src="http://static.www.calottery.com/build/js/modernizr-require.js?1381886021"></script>
+    <!-- inital require call for the global module, plus options to be used -->
+    <script type="text/javascript">
+        // Remove this once Ooyala fixes their code
+        // make it safe to use console.log always
+        (function (a) { function b() { } for (var c = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","), d; !!(d = c.pop()); ) { a[d] = a[d] || b; } })
+        (function () { try { console.log(); return window.console; } catch (a) { return (window.console = {}); } } ());
+    </script>
+    <script type="text/javascript">
+        require({
+            baseUrl: "http://static.www.calottery.com/build/js/",
+            urlArgs: "v=v46",
+            paths: {
+                "jquery": "lib/jquery",
+                "jqueryui": "lib/jquery-ui",
+                "jqueryqtip": "lib/jquery.qtip.min",
+                "order": "order_1.0.5"
+            },
+            priority: [
+                'jquery',
+                'jqueryui',
+                'jqueryqtip'
+            ]
+        });
+    </script>
+    
+    <script>
+var _prum = [['id', '573b5231abe53dc70431f22f'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script></head>
+<body class=" page-$5-scratchers-pure-gold-1287">
+    <form name="frmMain" method="post" action="/play/scratchers-games/$5-scratchers/pure-gold-1287" id="frmMain">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=AllxrlLhbRTEzvdB2TqEqD3YwtJ8CjiLxlb8OfwVbpuM0GBkrGmmuZOHnmk8wWT3JKUQLQGhkCokyVRzsAMwzqiZn_dLCBJ1hTU9OXz422KAcs1xtw5d7yFXjtJsWWQZ1RT0muh6BzResnPhis09Dkyyyco1&amp;t=2e2045e2" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F540AD8A" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="hR3d0mhuY6zEYj2gzcfcCugSRG6R6WuKBBNtLiWhUAB8lTcds5rzThrtig4LfvhqUjW561K3RDRv2J7dql3fn22Up6tBTCLFr44RZahyv6M7PX3NV6WI+L33b1FLFdjcl+cOjHlSv8mCfho1ZHkV9wxFnaeN/umJqNp00CC8Ewrp2zofbWyHs0wcBU1MlZO1wGksGn7s9ERwsMrVWgiMEPVTQUfkMdEILgU3H308oP3TxQDP" />
+</div>
+        
+        <div class="security_notice ui-dialog-content ui-widget-content" style="display: none;"
+            title="Notice to Users">
+            <input type="hidden" name="ctl11$hItemPath" id="ctl11_hItemPath" value="{A744713C-1DB5-4426-B902-6A914316E9BA}" />
+
+
+<p><strong>Information Collection, Use and Access Notice</strong></p>
+
+		<p>We collect and use the information provided to us (on this form, via a web page, via a web application or by email) in order to provide advice, information, services, or assistance. We are authorized to collect information for this purpose by section 8880 et seq. of the California Government Code. We recommend you do not provide any personal information not specifically requested. </p>
+    <p>When contacting us by email, we recommend that you only provide the personal information that you think we need to respond to your concern. If, however, you do not give us enough information, we may not be able to contact you or help you resolve your concern. </p>
+    <p>It is the policy of the California Lottery to share your personal information only as strictly necessary to provide services or assistance. This may include disclosing your personal information to Lottery affiliates and to other government agencies. We also could be required to disclose the personal information that you provide in the following circumstances: </p>
+    <ul class="bullets">
+      <li>In response to a Public Records Act request, as allowed by the Information Practices Act; </li>
+      <li>To another government agency as required by state or federal law; </li>
+      <li>In response to a court or administrative order, a subpoena, or a search warrant. </li>
+    </ul>
+    <p>You may review the records we maintain that contain your personal information, as permitted by the Information Practices Act. For questions about this notice, our <a href="/privacy-policy" title="Privacy policy">Privacy Policy</a>, or access to your records, contact the Lottery Privacy Coordinator at <a href="mailto:privacy@calottery.com" title="Privacy email">privacy@calottery.com</a> or write to: The California State Lottery - Attention: Privacy Coordinator. 700 Tenth Street, Sacramento, CA 95811. </p>
+
+        </div>
+        <div id="dvNotification" style="display: none" class="hasnotification">no</div>
+        <div class="winner-notification-dialog ui-dialog-content ui-widget-content" style="display: none;"
+            title="Winner Notification">
+            
+<h2>
+     !</h2>
+<p>
+    
+    
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+<div>
+    <input id="objWinnerNotification_chkAcknowledge" type="checkbox" name="objWinnerNotification$chkAcknowledge" />
+    <label for="objWinnerNotification_chkAcknowledge" id="objWinnerNotification_chkAcknowledgeLabel"></label>
+</div>
+        
+
+<div class="uppad">
+    <div class="ftop">
+        <div class="spacer">&nbsp;</div>
+        <div class="error-message"></div>
+    </div>
+    <div class="fleft">
+        <input type="submit" name="objWinnerNotification$btnNotifications" value="" id="objWinnerNotification_btnNotifications" />
+    </div>
+    <div class="fright">
+        <a id="objWinnerNotification_lnkClaimLink" class="modal-close-trigger" href="javascript:__doPostBack('objWinnerNotification$lnkClaimLink','')">Close</a>
+        <br />
+        
+    </div>
+</div>
+        </div>
+        <div id='container'>
+            
+            
+            <div class='wrapper'>
+                
+
+<header>
+    <a href="/" id='logo-sunburst' style="background: url('http://static.www.calottery.com/~/media/HomePage/logo 175x84 with trademark.png') " >CA Lottery Home</a>
+    <p id='top-nav'>
+    	<!--<a class="button" href="http://www.californialottery.com/" target="_blank"><span><span>CaliforniaLottery.com</span></span></a> -->
+        <a href="/about-us"><span>About Us</span></a> 
+        <a href="/play"><span>Games</span></a> 
+        <a href="/retailer"><span>Retailers</span></a>
+        <a href="http://www.californialottery.com" target="_blank"><span>Corporate Social Responsibility</span></a>
+        
+        <a href="http://www.calottery.com/play/scratchers-games/$5-scratchers/pure-gold-1287?sc_lang=es" id="objHeader_aLanguage">Espa&#241;ol</a>
+    </p>
+    <div id='search'>
+        <label for="q" class="visuallyhidden">Search</label>
+        <input autocomplete='on' value='' class='text placeholder' id='q' name='q' placeholder='Search' type='text' />
+        <button><span>Search</span></button>
+    </div>
+    <ul id='main-nav'>
+  	    
+  	    <li id="objHeader_liGivingBackV2" data-hover_content="giving-back-V2" class=""><a href="/giving-back"><span>Giving Back</span></a></li>
+        <li data-hover_content='happenings' class=""><a href="/happenings"><span>HAPPENINGS</span></a></li>
+        <li data-hover_content='play' class="selected"><a href="/play"><span>PLAY</span></a></li>
+        <li data-hover_content='win' class=""><a href="/win"><span>WIN</span></a></li>
+        <li data-hover_content='lucky-retailers' class=""><a href="/lucky-retailers"><span>LUCKY RETAILERS</span></a></li>
+        <li data-hover_content='my-account' class=" my-account">
+            <p class='welcome'>
+                
+                Welcome Guest
+            </p>
+            <a href='https://www.calottery.com/my-account'>
+                <span>My Account</span>
+            </a>
+            <p class='login'>
+                
+                    <a href='https://www.calottery.com/sign-in?redir=http://www.calottery.com/my-account'>Sign In</a> | 
+                    <a href='http://www.calottery.com/register'>Join</a>
+                
+                
+                
+            </p>
+            
+            
+        </li>
+    </ul>
+    <!--breadcrumbs-->      
+    <ul id='breadcrumbs'><li><a id="objHeader_ctl06_Repeater1_ctl01_HyperLink1" href="http://www.calottery.com">Home</a></li><li><a id="objHeader_ctl06_Repeater1_ctl02_HyperLink1" href="/play">Play</a></li><li><a id="objHeader_ctl06_Repeater1_ctl03_HyperLink1" href="/play/scratchers-games">Scratchers Games</a></li><li><a id="objHeader_ctl06_Repeater1_ctl04_HyperLink1" href="/play/scratchers-games/$5-scratchers">$5 Scratchers</a></li><li><a id="objHeader_ctl06_Repeater1_ctl05_HyperLink1"></a>Pure Gold (1287)</li></ul>
+    <section id='submenu'>
+        <div id='play'>
+			
+<h1>
+    <a id="objHeader_Header_Play_ctl00_HyperLink1" href="/play/play-overview"><span>Play Overview</span></a>
+    |
+    <a id="objHeader_Header_Play_ctl01_HyperLink1" href="/play/whats-my-game"><span>What's My Game Today?</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-2'>
+        <h2>
+            <a id="objHeader_Header_Play_ctl02_HyperLink1" href="/play/draw-games"><span>Draw Games</span></a>
+        </h2>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl00_lnkURL" href="/play/draw-games/powerball">POWERBALL</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl01_lnkURL" href="/play/draw-games/mega-millions">MEGA Millions</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl02_lnkURL" href="/play/draw-games/superlotto-plus">SuperLotto Plus</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl03_lnkURL" href="/play/draw-games/fantasy-5">Fantasy 5</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl04_lnkURL"><a href='/play/draw-games/daily-3'>Daily 3</a> | <a href='/play/draw-games/daily-4'>Daily 4</a></a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl05_lnkURL"></a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl06_lnkURL" href="/play/draw-games/daily-derby">Daily Derby</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play_rptDrawGames_ctl07_lnkURL" href="/play/draw-games/hot-spot">Hot Spot</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-2'>
+        <h2>
+            <a id="objHeader_Header_Play_ctl03_HyperLink1" href="/play/scratchers-games"><span>Scratchers Games</span></a>
+        </h2>
+        <ul>
+            <li><a href='/play/scratchers-games/$1-scratchers'>$1 Games</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href='/play/scratchers-games/$2-scratchers'>$2 Games</a></li><li><a href='/play/scratchers-games/$3-scratchers'>$3 Games</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href='/play/scratchers-games/$5-scratchers'>$5 Games</a></li><li><a href='/play/scratchers-games/$10-scratchers'>$10 Games</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href='/play/scratchers-games/$20-scratchers'>$20 Games</a></li><li><a href='/play/scratchers-games/$30-scratchers'>$30 Games</a><li><a href='/play/scratchers-games/end-of-game-info'>End of Game Info</a><li><a href='/play/scratchers-games/top-prizes-remaining'>Top Prizes Remaining</a><li><a href='/play/scratchers-games/faqs'>FAQs</a>
+        </ul>
+    </div>
+    
+    
+        <div class="column grid-2">
+            <h2>
+                <a id="objHeader_Header_Play_AbsLinkField4_HyperLink1" href="/play/second-chance"><span>2ND CHANCE</span></a></h2>
+            <ul>
+                <li><a id="objHeader_Header_Play_AbsLinkField5_HyperLink1" href="/play/second-chance/scratchers-second-chance"><span>Scratchers 2nd Chance</span></a> </li>
+				<li><a id="objHeader_Header_Play_AbsLinkField14_HyperLink1" href="/play/second-chance/fantasy-5-second-chance"><span>Fantasy 5 - 2nd Chance</span></a> </li>
+                <div id="objHeader_Header_Play_showForSLP2C">
+	
+                <li><a id="objHeader_Header_Play_AbsLinkField6_HyperLink1" href="/play/second-chance/slp-second-chance"><span>SuperLotto Plus 2nd Chance</span></a> </li>
+</div>
+                <li><a id="objHeader_Header_Play_AbsLinkField8_HyperLink1" href="/play/second-chance/draws-prizes"><span>Draws & Prizes</span></a> </li>
+				<li><a id="objHeader_Header_Play_AbsLinkField7_HyperLink1" href="/play/second-chance/my-submissions"><span>My Submissions</span></a> </li>
+                
+                <li><a id="objHeader_Header_Play_AbsLinkField9_HyperLink1" href="/play/second-chance/results-winners"><span>Results & Winners</span></a> </li>
+                <li><a id="objHeader_Header_Play_AbsLinkField10_HyperLink1"></a> </li>
+				<li><a id="objHeader_Header_Play_AbsLinkField15_HyperLink1" href="/play/second-chance/claim-process"><span>Claim Process</span></a> </li>
+            </ul>
+        </div>
+        <div class="column last-column grid-2">
+            <h2>
+                More ways to play</h2>
+            <ul>
+                <li><a id="objHeader_Header_Play_AbsLinkField11_HyperLink1" href="/play/jackpot-captain"><span>Jackpot Captain</span></a></li>
+            </ul>
+            <h2>
+                <a id="objHeader_Header_Play_AbsLinkField12_HyperLink1" href="/play/whats-my-game"><span>Game Finder</span></a></h2>
+            <ul>
+                <li><a id="objHeader_Header_Play_AbsLinkField13_HyperLink1" href="/play/whats-my-game"><span>What's My Game Today?</span></a></li>
+            </ul>
+            <!-- </div> -->
+        </div>
+    
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Try these new ways to play... and win.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Play_ctl04_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/holiday-2017"><span id="objHeader_Header_Play_ctl04_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/holiday-campaign-2017/Hol17_CandyBar_Flyout_Module_220x81.png" data-height="81px" data-width="220px" data-alt="holiday scratchers">holiday scratchers</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Play_ctl04_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/superlotto-plus-promotion"><span id="objHeader_Header_Play_ctl04_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/2017-superlotto-plus-ad-camp/Flyout_Candybar_Module_220x81-SLP.jpg" data-height="81px" data-width="220px" data-alt="Superlotto Plus">Superlotto Plus</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Play_ctl04_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/mobile-app"><span id="objHeader_Header_Play_ctl04_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Hot-Spot-To-Go/HotSpot_ToGo_FlyoutCandybarModule_220x81_ENG_PWS_FNL.jpg" data-height="81px" data-width="220px" data-alt="hot spot to go">hot spot to go</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+
+        </div>
+        <div id='win'>
+            
+<h1>
+    <a id="objHeader_Header_Win1_AbsLinkField1_HyperLink1" href="/win"><span>Win Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                Are You A Winner?
+            </h2>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Win1_rptAreYouAWinner_ctl00_lnkURL" href="/win/winning-numbers">Winning Numbers</a>
+                    </li>
+                
+        </ul>
+        <h2>
+            I've Won! Now What?
+        </h2>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl00_lnkURL" href="/win/claiming-prizes">Claiming Prizes</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl01_lnkURL" href="/about-us/district-offices">District Offices</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl02_lnkURL" href="/win/winners-handbook">Winner's Handbook</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-6 last-column'>
+        
+
+<div class='heading'>
+    <h2>
+        <a id="objHeader_Header_Win1_ctl00_AbsLinkField1_HyperLink1" href="/win/winner%20stories"><span>Winner Stories</span></a>
+    </h2>
+    <p class='see-all'>
+        <a id="objHeader_Header_Win1_ctl00_AbsLinkField2_HyperLink1" href="/win/winner%20stories"><span>See all &raquo;</span></a>
+    </p>
+</div>
+<ul>
+    
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl00_lnkURL1" class="img thumb deferImage" href="/win/winner stories/Damarius Vazquez"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Damaris Vazquez 200.jpg" data-height="42px" data-width="44px" data-alt=""></span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winner stories/Damarius Vazquez'>
+                            <strong>Unique Father-Daughter Gameplay Leads to $1 Million Scratchers® Win in Ventura County!</strong>
+                        </a>
+                        <br />
+                        Unique Father-Daughter Gameplay Leads to $1 Million Scratchers® Win in Ventura County!
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl01_lnkURL1" class="img thumb deferImage" href="/win/winner stories/Amalia-Novoa"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Amalia Novoa 200.jpg" data-height="42px" data-width="44px" data-alt=""></span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winner stories/Amalia-Novoa'>
+                            <strong>$1 Million Scratchers® Win in the City of Orange!</strong>
+                        </a>
+                        <br />
+                        $1 Million Scratchers® Win in the City of Orange!
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl02_lnkURL1" class="img thumb deferImage" href="/win/winner stories/ronald-hilton"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Ronald Hilton200.png" data-height="42px" data-width="44px" data-alt="Ronald Hilton 200">Ronald Hilton 200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winner stories/ronald-hilton'>
+                            <strong>$1.3 Million Ticket Sold in Solano County Claimed! </strong>
+                        </a>
+                        <br />
+                        $1.3 Million Ticket Sold in Solano County Claimed! 
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl03_lnkURL1" class="img thumb deferImage" href="/win/winner stories/frank-derfield"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl03_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Frank Derfield200.jpg" data-height="42px" data-width="44px" data-alt="Frank Derfield200">Frank Derfield200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winner stories/frank-derfield'>
+                            <strong>Luck Strikes Twice for S.F. Man Who Wins $5 Million Just One Year After Taking Home $100,000!</strong>
+                        </a>
+                        <br />
+                        Luck Strikes Twice for S.F. Man Who Wins $5 Million 
+                    </p>
+                </div>
+            </li>
+        
+</ul>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Get that winning feeling.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/superlotto-plus-promotion"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/2017-superlotto-plus-ad-camp/Flyout_Candybar_Module_220x81-SLP.jpg" data-height="81px" data-width="220px" data-alt="Superlotto Plus">Superlotto Plus</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/holiday-2017"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/holiday-campaign-2017/Hol17_CandyBar_Flyout_Module_220x81.png" data-height="81px" data-width="220px" data-alt="holiday scratchers">holiday scratchers</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/mobile-app"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Hot-Spot-To-Go/HotSpot_ToGo_FlyoutCandybarModule_220x81_ENG_PWS_FNL.jpg" data-height="81px" data-width="220px" data-alt="hot spot to go">hot spot to go</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+        </div>
+        <div id='happenings'>
+            
+
+<h1>
+    <a id="objHeader_Header_Happenings1_AbsLinkField5_HyperLink1" href="/happenings"><span>Happenings Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-6'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_Happenings1_AbsLinkField1_HyperLink1" href="/happenings/lottery-tv"><span><b>Lottery Videos</b></span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_Happenings1_AbsLinkField2_HyperLink1" href="/happenings/lottery-tv"><span>Watch Now &raquo;</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li class='media'>
+                     <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=lottery-news-ep40-november-2017"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Lottery-News/November CALN.PNG?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="aaa">aaa</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=lottery-news-ep40-november-2017">California Lottery News: Ep. 40 – November</a><br />
+                                Duration: 4:09
+                            </p>
+                        </div>                    </li>
+                
+                    <li class='media'>
+                     <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=winner-albert-gabourie"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Winner-videos/Albert Gabourie.png?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="winner video">winner video</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=winner-albert-gabourie">It’s a Beautiful Day</a><br />
+                                Duration: :26
+                            </p>
+                        </div>                    </li>
+                
+                    <li class='media'>
+                     <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=mobile-app-short-vs"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Second Chance/new 2nd chance logos/2ndChance_ENG_Left module.jpg?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="2nd chance ">2nd chance </span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=mobile-app-short-vs">Scan Ticket Codes with your Mobile Device!</a><br />
+                                Duration: :43
+                            </p>
+                        </div>                    </li>
+                
+                    <li class='media'>
+                     <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=BEWARE-of-Lottery-scams"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/integrity-videos/Lottery Scams.jpg?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="Lottery Scam image">Lottery Scam image</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=BEWARE-of-Lottery-scams">BEWARE of Lottery Scams</a><br />
+                                Duration: 4:49
+                            </p>
+                        </div>                    </li>
+                
+        </ul>
+    </div>
+    
+    
+    
+    <div class='column last-column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_Happenings1_AbsLinkField3_HyperLink1" href="/happenings/events"><span>Events</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_Happenings1_AbsLinkField4_HyperLink1" href="/happenings/events"><span>See all &raquo;</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a href="/happenings/events/stater-bros-grand-opening">
+                            Pasadena Vallarta Supermarket Event &raquo;
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/happenings/events/la-live">
+                            Microsoft Square at L.A. LIVE &raquo;
+                        </a>
+                    </li>
+                
+        </ul>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    See what happens when you play.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl00_lnkURL1" class="deferImage" href="/play/jackpot-captain/promotions"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Play/Jackpot-Captain/Jackpot-captain-spotlight/JPC_Spotlight_Nov2017_promo/JPC_Spotlight_CandyBarModule_220x81.png" data-height="81px" data-width="220px" data-alt="JPC Spotlight">JPC Spotlight</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/mobile-app"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Hot-Spot-To-Go/HotSpot_ToGo_FlyoutCandybarModule_220x81_ENG_PWS_FNL.jpg" data-height="81px" data-width="220px" data-alt="hot spot to go">hot spot to go</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/superlotto-plus-promotion"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/2017-superlotto-plus-ad-camp/Flyout_Candybar_Module_220x81-SLP.jpg" data-height="81px" data-width="220px" data-alt="Superlotto Plus">Superlotto Plus</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+        </div>
+        <div id='giving-back'>
+            
+
+<h1>
+    <a id="objHeader_Header_GivingBack1_AbsLinkField1_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back"><span>Giving Back Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField2_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/how-much-money"><span>Where The Money Goes</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField3_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/how-much-money"><span>See all &raquo;</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl00_lnkURL" href="/sitecore/content/ARCHIVE/giving-back/lottery-funds-at-work">Lottery Funds at Work</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl01_lnkURL" href="/sitecore/content/ARCHIVE/giving-back/making-a-difference">Making a Difference</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl02_lnkURL" href="/sitecore/content/ARCHIVE/giving-back/partnering-in-education">Possibilities in Education      </a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl03_lnkURL" href="/sitecore/content/ARCHIVE/giving-back/how-much-money">How Much Money</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField4_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/making-a-difference"><span>Making A Difference</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField5_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/making-a-difference"><span>See all &raquo;</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li class='media blurb'>
+                        <div class='bd'>
+                            <p>
+                                <strong>Fulfilling Our Mission</strong><br />
+                                
+		<p>In 1984, Proposition 37...<br />
+                                <a id="objHeader_Header_GivingBack1_rptMakingADifference_ctl00_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/making-a-difference/mission-statement">Get the full story&raquo;
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media blurb'>
+                        <div class='bd'>
+                            <p>
+                                <strong>California Lottery Benefits California Schools</strong><br />
+                                
+		<p>Since the first lottery...<br />
+                                <a id="objHeader_Header_GivingBack1_rptMakingADifference_ctl01_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/making-a-difference/lottery-benefits-california-schools">Get the full story&raquo;
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column last-column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField6_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/partnering-in-education"><span>Partners In Education</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField7_HyperLink1" href="/sitecore/content/ARCHIVE/giving-back/partnering-in-education"><span>See all &raquo;</span></a>
+            </p>
+        </div>
+        <p>
+            We've teamed up with partners to create opportunities for students and educators. <br />
+            <a id="objHeader_Header_GivingBack1_AbsLinkField9_HyperLink1"></a>
+        </p>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    When you play California isn't the only winner.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl00_lnkURL1" class="deferImage" href="/sitecore/content/ARCHIVE/giving-back/lottery-funds-at-work"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/CA-Lot-web-modules-01-v2.jpg" data-height="81px" data-width="220px" data-alt="Corporate social responsibility images">Corporate social responsibility images</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl01_lnkURL1" class="deferImage" href="http://www.californialottery.com/Contribution%20to%20Education/Where%20the%20Money%20Goes"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/CA-Lot-web-modules-02-v2.jpg" data-height="81px" data-width="220px" data-alt="Corporate social responsibility images">Corporate social responsibility images</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/lottery-tv/funding-education-videos"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/CA-Lot-web-modules-04-v2.jpg" data-height="81px" data-width="220px" data-alt="Corporate social responsibility images">Corporate social responsibility images</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+        </div>
+        <div id='giving-back-V2'>
+            
+<h1>
+    <a id="objHeader_Header_GivingBackV2_AbsLinkField1_HyperLink1" href="/giving-back"><span>Giving Back Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBackV2_AbsLinkField2_HyperLink1" href="/giving-back/education"><span>EDUCATION</span></a>
+            </h2>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_GivingBackV2_rptEducationFeaturedPages_ctl00_lnkURL" href="/giving-back/education/mission">Our Mission</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBackV2_rptEducationFeaturedPages_ctl01_lnkURL" href="/giving-back/education/lottery-funds-at-work">Lottery Funds at Work</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBackV2_rptEducationFeaturedPages_ctl02_lnkURL" href="/giving-back/education/education-resources">Education Resources</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBackV2_rptEducationFeaturedPages_ctl03_lnkURL" href="/giving-back/education/star-students">Star Students</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-6 last-column'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBackV2_AbsLinkField3_HyperLink1" href="/giving-back/education/education-videos"><span>Education TV</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBackV2_AbsLinkField4_HyperLink1" href="/happenings/lottery-tv/funding-education-videos"><span>See all »</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li class='media'>
+                        <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl00_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/funding-education-videos?v=jackson-elementary-school"><span id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Funding-education-videos/Jackson Elementary.jpg?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt=""></span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl00_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/funding-education-videos?v=jackson-elementary-school">Jackson Elementary School (El Dorado Hills, El Dorado County)</a><br />
+                                Duration: 3:04
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl01_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/funding-education-videos?v=cathedral-city-high-school-2016"><span id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Funding-education-videos/cathedral-city-high-school.PNG?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="cathedral-city-high-school-2016">cathedral-city-high-school-2016</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl01_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/funding-education-videos?v=cathedral-city-high-school-2016">Cathedral City High School (Cathedral City, Riverside County)</a><br />
+                                Duration: 2:50
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl02_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/funding-education-videos?v=woodville-elementary-school"><span id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Funding-education-videos/woodville elementary.JPG?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="Education video">Education video</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl02_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/funding-education-videos?v=woodville-elementary-school">Woodville Elementary School (Porterville, Tulare County)</a><br />
+                                Duration: 2:58
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl03_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/funding-education-videos?v=san-diego-city-college"><span id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl03_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Funding-education-videos/SD cosmotology.JPG?h=42&amp;mh=42&amp;mw=44&amp;w=44" data-height="42px" data-width="44px" data-alt="Education video">Education video</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_GivingBackV2_rptLotteryTV_ctl03_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/funding-education-videos?v=san-diego-city-college">San Diego City College (San Diego, S.D. County)</a><br />
+                                Duration: 3:25
+                            </p>
+                        </div>
+                    </li>
+                
+        </ul>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Proud to support CA schools.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl00_lnkURL1" class="deferImage" href="/giving-back/education/lottery-funds-at-work"><span id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/lfaw-candybar.png" data-height="82px" data-width="222px" data-alt="Lottery Funds at Work">Lottery Funds at Work</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl01_lnkURL1" class="deferImage" href="/giving-back/education/teacher-stories"><span id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/teacher-stories-candybar.png" data-height="82px" data-width="222px" data-alt="Teacher Stories">Teacher Stories</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl02_lnkURL1" class="deferImage" href="/giving-back/education/where-money-goes"><span id="objHeader_Header_GivingBackV2_ctl00_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Giving-Back/csr-candybar-modules/where-it-goes-candybar.png" data-height="82px" data-width="222px" data-alt="Where the money goes">Where the money goes</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+        </div>
+        <div id='lucky-retailers'>
+            
+
+<h1>
+    <a id="objHeader_Header_LuckyRetailers1_AbsLinkField1_HyperLink1" href="/lucky-retailers"><span>Lucky Retailers Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <h2>
+           <a id="objHeader_Header_LuckyRetailers1_AbsLinkField3_HyperLink1"></a>
+        </h2>
+        <h2>
+           <a id="objHeader_Header_LuckyRetailers1_AbsLinkField7_HyperLink1" href="/lucky-retailers"><span>LUCKY RETAILERS</span></a>
+        </h2>
+        <p>Easily search for Lottery retailers that have paid out large amounts of prizes to players. </p>
+        
+        <p><a id="objHeader_Header_LuckyRetailers1_AbsLinkField6_HyperLink1" href="/lucky-retailers"><span>Find a Lucky Retailer near you &raquo;</span></a></p>
+        
+    </div>
+
+    <div class='column grid-3'>
+            <h2><a id="objHeader_Header_LuckyRetailers1_AbsLinkField2_HyperLink1" href="/lucky-retailers"><span>WHERE TO PLAY</span></a></h2>
+            <div class="clearfix">
+                <div class="fleft"><img id="objHeader_Header_LuckyRetailers1_AbsLinkField5_Image1" src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/sun-map-marker.ashx" alt="California Lottery" style="height:73px;width:64px;border-width:0px;" /></div>
+                <p>There are more than 22,000 Lottery retail locations across California.<br/><br/>Find a Lottery retailer near you.</p>
+            </div>
+            <p><a id="objHeader_Header_LuckyRetailers1_AbsLinkField4_HyperLink1" href="/lucky-retailers"><span>Search &raquo;</span></a></p>          
+    </div>
+
+    <div class='column last-column grid-3'>
+        <h2><a id="objHeader_Header_LuckyRetailers1_scMoreWaysToPlayHeader_HyperLink1" href="/lucky-retailers/more-ways-to-buy"><span>MORE WAYS TO BUY</span></a></h2>
+        <p>From Scratchers games vending machines to draw games terminals, learn about more ways to purchase Lottery tickets.</p>
+         <p><a id="objHeader_Header_LuckyRetailers1_scMoreWaysToPlayLink_HyperLink1" href="/lucky-retailers/more-ways-to-buy"><span>See more ways to buy &raquo;</span></a></p>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Easily search for Lottery retailers that have paid out large amounts of prizes to players. 
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl00_lnkURL1" class="deferImage" href="/play/second-chance/slp-second-chance"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Second Chance/SLP-2nd-Chance-launch/Flyout-Candybar-Module_220x81.jpg" data-height="81px" data-width="220px" data-alt="slp">slp</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl01_lnkURL1" class="deferImage" href="/play/draw-games/mega-millions"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0010_MEGA-Millions.ashx" data-height="81px" data-width="220px" data-alt="Play for a life changing win. Go to MEGA Millions. ">Play for a life changing win. Go to MEGA Millions. </span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/mobile-app"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Hot-Spot-To-Go/HotSpot_ToGo_FlyoutCandybarModule_220x81_ENG_PWS_FNL.jpg" data-height="81px" data-width="220px" data-alt="hot spot to go">hot spot to go</span></a>
+            </li>
+        
+</ul>
+
+
+</div>
+        </div>
+        <div id='my-account'>
+            
+
+
+
+    <!-- signed out state -->
+    <h1>
+        My Account
+    </h1>
+    <div class="row clearfix" style="">
+        <div class="column grid-4">
+            <p>
+                Hello Guest, already have an account?
+                <a href='https://www.calottery.com/sign-in?redir=http://www.calottery.com/my-account'>
+                    Sign In
+                </a>
+            </p>
+            
+		<h2>Don't have an account?</h2>
+    <p class="no-margin">No problem. Sign up to get full access to:</p>
+    <ul class="bullet">
+      <li>2nd Chance draws </li>
+      <li>Jackpot Captain tools </li>
+      <li>Exclusive promotions and more</li>
+    </ul>
+            <a href="http://www.calottery.com/register"
+                class="button"><span><span>
+                    Join Now
+                </span></span></a>
+        </div>
+        <div class='column last-column grid-5'>
+            
+		<p align="center">
+      <a href="/happenings/ca-adventure">
+      </a>
+      <a href="/happenings/ca-adventure">
+      </a>
+      <a href="/happenings/ca-adventure">
+      </a>
+      <a href="/happenings/holiday-2017">
+      </a>
+      <a href="/happenings/mobile-app">
+      </a>
+      <a href="/play/jackpot-captain/promotions">
+      </a>
+      <a href="/happenings/mobile-app">
+      </a>
+      <a href="/sitecore/content/ARCHIVE/2nd-chance-x-the-money">
+      </a>
+      <a href="/sitecore/content/ARCHIVE/2nd-chance-the-price-is-right">
+      </a>
+      <a href="/play/jackpot-captain/promotions">
+        <img width="340" height="187" alt="JPC Spotlight" src="http://static.www.calottery.com/~/media/Play/Jackpot-Captain/Jackpot-captain-spotlight/JPC_Spotlight_Nov2017_promo/JPC_Spotlight_MyAccountFlyout_340X187.png?w=340&amp;h=187&amp;as=1" />
+      </a>
+      <a href="/happenings/mobile-app">
+      </a>
+    </p>
+    <p align="center">
+      <a href="/happenings/mobile-app">
+      </a>
+      <a href="http://www.calottery.com/happenings/power-of-5s">
+      </a>
+      <a href="/happenings/savemart-superlotto-plus-promotion">
+      </a>
+      <a href="/sitecore/content/SAVE/fantasy-5-2nd-chance-promotion">
+      </a>
+      <a href="/happenings/mobile-app">
+      </a>
+    </p>
+        </div>
+    </div>
+    <!-- flyout promos -->
+    <div class='ways-to-play'>
+        
+<h2>
+    Members get to play more!
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl00_lnkURL1" class="deferImage" href="/play/second-chance/fantasy-5-second-chance"><span id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/fantasy-5-2nd-chance/Flyout-Candybar-Module_220x81.png" data-height="81px" data-width="220px" data-alt="Fantasy 5 2nd Chance promotion">Fantasy 5 2nd Chance promotion</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/holiday-2017"><span id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/holiday-campaign-2017/Hol17_CandyBar_Flyout_Module_220x81.png" data-height="81px" data-width="220px" data-alt="holiday scratchers">holiday scratchers</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl02_lnkURL1" class="deferImage" href="/play/second-chance/slp-second-chance"><span id="objHeader_Header_My_Account_Header_Promo4_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Second Chance/SLP-2nd-Chance-launch/Flyout-Candybar-Module_220x81.jpg" data-height="81px" data-width="220px" data-alt="slp">slp</span></a>
+            </li>
+        
+</ul>
+
+
+    </div>
+
+
+
+
+
+
+
+
+        </div>
+      </section>
+</header>
+
+                    
+                    
+                    
+                
+
+<script type="text/javascript">
+    var winningNumbersErrorMessage = "There was a problem loading the page!";
+</script>
+<noscript><div style="text-align:center;color:red;margin-top:-20px;padding-bottom:10px">
+		<b> Sorry, your browser does not have JavaScript enabled!</b>
+<br />
+              The California Lottery wants you to have the very best possible experience at calottery.com.Please enable Javascript or use a browser that supports it.</div>
+  </noscript>
+<div id='main' class=''>
+	
+    <div hidden='False' id='winning-numbers' class="winning_numbers_tab" style="display:none;">
+        <p>
+            <a href='#' onclick="_gaq.push(['_trackPageview', '/winning-numbers']);">Winning Numbers</a>
+        </p>
+		
+    </div>
+	
+    
+    
+    
+            
+
+<!--
+COLUMNS-LEFT-CONTENT-AND-RIGHT
+
+  LEFT COLUMN
+-->
+<div id="left-column">
+    <ul id="sub-nav"><li  class=""><a href="/play/play-overview">Play Overview</a></li><li  class=""><a href="/play/draw-games">Draw Games</a></li><li  class="open"><a href="/play/scratchers-games">Scratchers Games</a><ul><li  class=""><a href="/play/scratchers-games/$1-scratchers">$1 Scratchers</a></li><li  class=""><a href="/play/scratchers-games/$2-scratchers">$2 Scratchers</a></li><li  class=""><a href="/play/scratchers-games/$3-scratchers">$3 Scratchers</a></li><li  class="first open"><a href="/play/scratchers-games/$5-scratchers">$5 Scratchers</a><ul><li  class="selected"><a href="/play/scratchers-games/$5-scratchers/pure-gold-1287">Pure Gold (1287)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/bring-on-the-bens-1282">Bring on the Bens (1282)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/lets-play-poker-1279">Let's Play Poker (1279)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/california-black-premium-1274">California Black Premium (1274)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/the-multiplier-game-1271">The Multiplier Game (1271)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/set-for-life-1267">Set for Life (1267)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/mega-crossword-1264">Mega Crossword (1264)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/blackout-bingo-1262">Blackout Bingo (1262)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/money-in-the-bank-1259">Money in the Bank (1259)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/lucky-fortune-1255">Lucky Fortune (1255)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/ruby-red-7s-1253">Ruby Red 7's (1253)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/high-card-poker-1249">High Card Poker (1249)</a></li><li  class=""><a href="/play/scratchers-games/$5-scratchers/extra-crossword-1234">Extra Crossword (1234)</a></li><li  class="last"><a href="/play/scratchers-games/$5-scratchers/hit-$500-1159">Hit $500! (1159)</a></li></ul></li><li  class=""><a href="/play/scratchers-games/$10-scratchers">$10 Scratchers</a></li><li  class=""><a href="/play/scratchers-games/$20-scratchers">$20 Scratchers</a></li><li  class=""><a href="/play/scratchers-games/$30-scratchers">$30 Scratchers</a></li><li  class=""><a href="/play/scratchers-games/end-of-game-info">End of Game Info</a></li><li  class=""><a href="/play/scratchers-games/top-prizes-remaining">Top Prizes Remaining</a></li><li  class="last"><a href="/play/scratchers-games/faqs">FAQs</a></li></ul></li><li  class=""><a href="/play/jackpot-captain">Jackpot Captain</a></li><li  class=""><a href="/play/second-chance">2nd Chance</a></li><li  class="last"><a href="/play/whats-my-game">What's My Game Today?</a></li></ul>
+    
+<div class="box round">
+	<h3>More Ways to Win!</h3>
+	<p>Get more ways to win big with your favorite Scratchers games, Fantasy 5 and SuperLotto Plus! See how 2nd Chance works and start submitting codes!</p>
+    <p><a href="/play/second-chance">See how it works &raquo;</a></p>
+	<div class="decorate-img"><img src="http://static.www.calottery.com/~/media/module-graphics/2nd_Chance_logo.png" alt="2nd Chance" width="198" height="67" /></div>
+</div>
+
+
+<div class="box round">
+	<h3>Join the conversation on<a href="https://www.facebook.com/calottery" target="_blank"> Facebook.</a></h3>
+	
+	<div class="decorate-img"><img src="http://static.www.calottery.com/~/media/Images/fb logo.bmp" alt="Facebook logo" width="140" height="140" /></div>
+</div>
+</div>
+<!--
+
+CONTENT COLUMN
+
+-->
+<div id="main-column">
+    <!-- hero -->
+        
+    
+
+<section id="hero" class="static_hero">
+    <div id="heroImage1" class="two-col no-corners" style="background: url('http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/$5-scratchers/1287_Pure_Gold_hero.jpg') no-repeat 0pt 0pt;">
+        <div class="heroContentBox">
+            <h1>PURE GOLD</h1>
+            <h3>Go for the </h3>
+            <h2>GOLD!</h2>
+            <p>What's more alluring than pure gold? Playing <strong>PURE GOLD Scratchers®! </strong>This ticket offers seven games and a chance to <strong>WIN UP TO $250,000!</strong> Winning in game 3 or 5 will automatically multiply your prize! Now that's Pure happiness!</p>
+                    <!-- AddThis Button BEGIN -->
+                    
+<div class="addthis_toolbox addthis_default_style ">
+<p>Share:</p>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+</div>
+<script type="text/javascript">    var addthis_config = { data_use_flash: false, data_use_cookies: false, data_ga_property: 'UA-576767-1', data_track_clickback: true };</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dc1ddff3f68cab5"></script>
+ 
+                    <!-- AddThis Button END -->
+             
+                    <p class="scratchers-full-width">Ticket Price: $5 | Overall odds: 1 in 3.76 | Cash odds: 1 in 5.24 | Game Number: 1287
+        </p>
+        </div>        
+        <div class="how-to-play slide-trigger">
+            <a href="#"><img src="http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/button_how_to_play.png" alt="How to Play" width="166" height="52" /></a>
+        </div>
+    
+        <div class="heroStaticRight">
+            <img src="http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/$5-scratchers/1287_Pure_Gold_violator.png" alt="Pure Gold $5 game 1287" width="14" height="310" />
+        </div>
+    </div>
+</section>
+
+<section id="hero" class="slide_hero" style="display:none">
+
+    <ul class='ui-tabs-nav slide_hero_control' id='slide-controls' style="display:none;">
+        <li id='slide-control-heroImage2' class="inslide" style="display:none;"><a class='selected' href='#heroImage2'>Step 1</a></li>
+        <li id='slide-control-heroImage3' class="inslide next"> <a href='#heroImage3'>Step 2</a> </li>
+        <li id='slide-control-heroImage4' class="inslide" style="display:none;"> <a href='#heroImage4'>Step 3</a> </li>
+        <li id='slide-control-heroImage5' class="inslide" style="display:none;"> <a href='#heroImage5'>Step 4</a> </li>
+        <li class="done_button">Done</li>
+    </ul>
+
+
+
+    <div id="heroImage2" class="two-col steps" style="background: url('http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/$5-scratchers/1287_Pure_Gold_step1.jpg') no-repeat 0pt 0pt;">
+        <div class="heroContentBox slideContent">
+            <h3>How to Play </h3>
+            <h1>Step 1</h1>
+            <p>Match any of “YOUR NUMBERS” to any of the five“WINNING NUMBERS,” win prize shown for that game.If you win in “GAME 3,” automatically triple your prize.If you win in “GAME 5,” automatically win 5 times your prize.</p>
+            
+        </div> 
+    </div>
+
+    <div id="heroImage3" class="two-col steps" style="background: url('http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/all_scratchers_step_1.jpg') no-repeat 0pt 0pt;">
+        <div class="heroContentBox slideContent">
+            <h3>How to Play </h3>
+            <h1>Step 2</h1>
+            
+		<p>Find a Scratchers at one of more than 22,000 California Lottery retail locations.</p>
+ 
+            <p><a href="/lucky-retailers/lucky-retailers-list"><br> Find a Retailer near you &raquo;</a></p>
+        </div>  
+    </div>
+
+    <div id="heroImage4" class="two-col steps" style="background: url('http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/$5-scratchers/scratchers_$5_step_3.jpg') no-repeat 0pt 0pt;">
+        <div class="heroContentBox slideContent">
+            <h3>How to Play </h3>
+            <h1>Step 3</h1>
+            <p>Check your ticket to see if it’s a winner by scanning the bar code at a Lottery retailer. If you win $599 or less, you can cash your ticket at a Lottery Retailer.</p>
+            <p><a href="/win/claiming-prizes">Learn how to claim a prize &raquo;</a></p>
+        </div>  
+    </div>
+
+    <div id="heroImage5" class="two-col steps" style="background: url('http://static.www.calottery.com/~/media/Play/Slideshows_and_hero_images/Scratchers-games-slideshows/$5-scratchers/scratchers_$5_step_4.jpg') no-repeat 0pt 0pt;">
+        <div class="heroContentBox slideContent">
+            <h3>How to Play </h3>
+            <h1>Step 4</h1>
+            <p>If your ticket isn't an instant winner, don't worry. You can submit your non-winning ticket into Scratchers 2nd Chance for another chance to win a cash prize. Good luck.</p>
+            <p><a href="/play/second-chance/scratchers-second-chance">Go to Scratchers 2nd Chance &raquo;</a></p>
+        </div>  
+    </div>
+
+</section>
+
+        
+    <section id="main-content" class="vert-divider-6">
+        <div id="content" class="grid-6">
+            
+
+<div class="box blue_bg">
+	<h3 class="no_margin">More Ways to Win!</h3>
+    <p><strong></strong></p>
+
+	<p>
+        
+		<p align="center">
+      <strong>
+        <img width="217" height="160" alt="2nd Chance Scratchers" src="http://static.www.calottery.com/~/media/Second Chance/2nd-chance-scratchers-events.png?w=217&amp;h=160&amp;as=1" /> </strong>
+    </p>
+    <p align="center">Submit your non-winning Pure Gold ticket code into Scratchers 2nd Chance for another chance at cash prizes totaling <strong>$100,000 EVERY WEEK! </strong>You could be one of 32 weekly Scratchers 2nd Chance winners! Use the Lottery's mobile app to scan or manually submit your non-winning ticket code. </p>
+    <p align="center">Don't miss out on money that could be yours!</p>
+    <p align="center">
+    </p>
+		
+	</p>
+	<p><strong>Have a non-winning ticket? </strong></p>
+
+	<p><a href="/play/second-chance/scratchers-second-chance">Submit your ticket code into 2nd Chance now  &raquo;</a></p>
+</div><input type="hidden" name="objBody$content_0$pagecontent_1$hItemPath" id="objBody_content_0_pagecontent_1_hItemPath" value="{B6E304BF-F974-4CF8-9D1A-5B3845F85B00}" />
+
+<h2 class="uppad">Odds and Available Prizes</h2>
+<table class="draw_games tag_even">
+    <thead>
+        <tr>
+            <th style="width: 20%;">
+                Prizes
+            </th>
+            <th style="width: 20%;">
+                Odds 1 in
+            </th>
+            <th style="width: 20%;">
+                Total # of Winners
+            </th>
+            <th style="width: 20%;">
+                Prizes Claimed
+            </th>
+            <th style="width: 20%;">
+                Prizes Available
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>$250,000</td><td>1,193,339</td><td>15</td><td>0</td><td>15</td></tr><tr><td>$10,000</td><td>596,669</td><td>30</td><td>0</td><td>30</td></tr><tr><td>$1,000</td><td>13,240</td><td>1,352</td><td>8</td><td>1,344</td></tr><tr><td>$500</td><td>2,996</td><td>5,974</td><td>944</td><td>5,030</td></tr><tr><td>$100</td><td>400</td><td>44,708</td><td>6,766</td><td>37,942</td></tr><tr><td>$50</td><td>219</td><td>81,754</td><td>12,249</td><td>69,505</td></tr><tr><td>$30</td><td>92</td><td>193,683</td><td>28,939</td><td>164,744</td></tr><tr><td>$20</td><td>40</td><td>447,456</td><td>66,667</td><td>380,789</td></tr><tr><td>$15</td><td>33</td><td>537,144</td><td>78,016</td><td>459,128</td></tr><tr><td>$10</td><td>18</td><td>984,384</td><td>143,940</td><td>840,444</td></tr><tr><td>$6</td><td>16</td><td>1,118,755</td><td>158,228</td><td>960,527</td></tr><tr><td>Ticket</td><td>13</td><td>1,342,506</td><td>190,148</td><td>1,152,358</td></tr>
+    </tbody>
+</table>
+
+		<b>This table reflects all Scratchers prizes for this game.</b> <strong>After game start, some prizes, including top prizes, may have been claimed. </strong>Click <a href="/play/second-chance/scratchers-second-chance">Scratchers 2nd Chance</a> program to submit your non-winning tickets for another way to win!
+
+<input type="hidden" name="objBody$content_0$pagecontent_1$hTotalTicketsIssued" id="objBody_content_0_pagecontent_1_hTotalTicketsIssued" />
+<table class="draw_games tag_even" style="visibility:hidden">
+    <thead>
+        <tr>
+            <th style="width: 20%;">
+                Prizes
+            </th>
+            <th style="width: 20%;">
+                Odds 1 in
+            </th>
+            <th style="width: 20%;">
+                Total # of Winners
+            </th>
+            <th style="width: 20%;">
+                Prizes Claimed
+            </th>
+            <th style="width: 20%;">
+                Prizes Available
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+        </div>
+        <!--
+
+        RIGHT COLUMN
+
+        -->
+        <aside id="right-column">
+			
+
+
+
+<div class="box no-pad right_mod_input"> <!-- no-pad -->
+    <div id="objBody_content_0_ctl07_WhereToPlayPanel">
+	
+        <h3 class="is_not_retailer">Where to Buy</h3>
+        <p class="is_not_retailer">Find the closest place to play your favorite Lottery games. Simply enter an address, city name/state or zip code.</p>
+    
+</div>
+    <fieldset>
+        <div class="downpad is_retailer">
+            <strong>Find a Retailer by searching for an address, city/state or zip: </strong>
+        </div>
+        <div id="objBody_content_0_ctl07_Panel2">
+	
+            <label for="objBody_content_0_ctl07_tbLocation" id="objBody_content_0_ctl07_tbLocationLabel" class="visuallyhidden">Find a Retailer by searching for an address, city/state or zip: </label>
+            <input name="objBody$content_0$ctl07$tbLocation" type="text" id="objBody_content_0_ctl07_tbLocation" class="location text placeholder" />
+            <input name="objBody$content_0$ctl07$myPlaceHolder" type="hidden" id="objBody_content_0_ctl07_myPlaceHolder" value="Address or City or Zip" />
+            &nbsp;
+            <br />&nbsp;
+            <p>
+                <strong><em>All retailers listed sell Draw Games.</em></strong>
+            </p>
+
+            <strong>Also show retailers that sell:</strong>
+            <p>
+                <input id="objBody_content_0_ctl07_chkScratchers" type="checkbox" name="objBody$content_0$ctl07$chkScratchers" />
+                <label for="objBody_content_0_ctl07_chkScratchers" id="objBody_content_0_ctl07_chkScratchersLabel">Scratchers Games</label>
+            </p>
+            <p>
+                <input id="objBody_content_0_ctl07_chkHotSpots" type="checkbox" name="objBody$content_0$ctl07$chkHotSpots" />
+                <label for="objBody_content_0_ctl07_chkHotSpots" id="objBody_content_0_ctl07_chkHotSpotsLabel">Hot Spot Locations</label>
+            </p>
+            
+            <strong>Show Me:</strong>
+            <span id="objBody_content_0_ctl07_rLuckyRetailer" class="no-border findRetailer"><input id="objBody_content_0_ctl07_rLuckyRetailer_0" type="radio" name="objBody$content_0$ctl07$rLuckyRetailer" value="0" /><label for="objBody_content_0_ctl07_rLuckyRetailer_0">All Retailers</label><br /><input id="objBody_content_0_ctl07_rLuckyRetailer_1" type="radio" name="objBody$content_0$ctl07$rLuckyRetailer" value="1" checked="checked" /><label for="objBody_content_0_ctl07_rLuckyRetailer_1">Lucky Retailers</label></span>
+            <a id="objBody_content_0_ctl07_lbtnSubmit" class="button lucky_retailer_submit" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;objBody$content_0$ctl07$lbtnSubmit&quot;, &quot;&quot;, true, &quot;vgSearch&quot;, &quot;&quot;, false, true))"><span><span>Search</span></span></a>
+        
+</div>
+        <p class="note">
+		<p>Lucky Retailers are those locations that paid out large amounts of prizes to players in the last calendar year.</p>
+</p>
+    </fieldset>
+</div>
+<script type="text/javascript">
+    function validateAtLeast(oSrc, args) {
+        args.IsValid = (args.Value.length > 4);
+    }
+</script>
+
+<div class="no-pad">
+    <a href="/happenings/lottery-tv"><img src="http://static.www.calottery.com/~/media/Media Section/lottery-news-pws-tab.jpg" alt="how to play" width="205" height="123" /></a>
+    <h3>Tune in to Lottery TV!</h3>
+    <p>Get the latest Lottery News, TV Commercials, see Winners and much more!<br/></p>
+    <p><a href="/happenings/lottery-tv">Watch Now &raquo;</a></p>
+</div>
+		</aside>
+    </section>     
+</div>
+
+<script type="text/javascript">
+    require(["pages/landing_page"]);
+</script>
+        
+    
+
+    
+    
+        <div id="winning_number_dialog_target" class="{'reloadOnActivate':true}"></div>
+    
+</div>
+
+                
+            </div>
+        </div>
+        
+
+<footer>
+    <div class='wrapper clearfix'>
+        <div id='footer-content'>
+            <!-- I AM -->
+            <div class='column grid-3'>
+    		    <ul class='footer-nav'>
+                        
+		                    <li>
+		                        <a id="ctl13_rptIm_ctl00_lnkURL" href="/media">Journalist</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl13_rptIm_ctl01_lnkURL" href="/about-us/careers">Job Seeker</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl13_rptIm_ctl02_lnkURL" href="/vendors">Vendor</a>
+		                    </li>
+                        
+                </ul>
+          	</div>
+            <!-- HELP ME -->
+            <div class='column grid-3'>
+    		  
+    		    <ul class='footer-nav'>
+                    
+		                <li>
+		                        <a id="ctl13_rptHelpMe_ctl00_lnkURL" href="/contact-us">Contact the Lottery</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl13_rptHelpMe_ctl01_lnkURL" href="http://static.www.calottery.com/~/media/Footer_Pages/aCSL%201367%20Language%20Access%20Complaint-update.pdf" target="_blank">Language Access Complaint</a>
+		                </li>
+                    
+                </ul>
+          	</div>
+            <!-- SHOW ME -->
+            <div class='column grid-3 center'>
+    		    
+		<ul id="footer-badges" class="clearfix">
+      <li class="facebook">
+        <a title="facebook for CA Lottery" href="http://www.facebook.com/calottery" target="_blank">CA Lottery on Facebook</a> </li>
+      <li class="twitter">
+        <a title="twitter for CA Lottery" href="http://twitter.com/calottery" target="_blank">CA Lottery on Twitter</a> </li>
+      <li class="youtube">
+        <a title="Youtube for CA Lottery" href="http://www.youtube.com/user/CaliforniaLottery" target="_blank">CA Lottery on YouTube</a> </li>
+      <li class="instagram">
+        <a title="Instagram for CA Lottery" href="http://instagram.com/calottery" target="_blank">CA Lottery on Instagram</a> </li>
+    </ul>
+    <p>
+      <a href="~/link.aspx?_id=1FA772FEE9D14B07B85E91803FA15C7F&amp;_z=z">Sign up for Jackpot alerts</a> </p>
+
+<div>
+    <a href="https://itunes.apple.com/us/app/california-lottery-official/id874978299?mt=8" target="_blank"><img width="106" height="32" alt="Get the iOS App" src="http://static.www.calottery.com/~/media/mobile/AppleStore.png?w=106&amp;h=32&amp;as=1" style="float: left" /></a>
+               <a href="https://play.google.com/store/apps/details?id=gov.ca.lot.caLotteryApp" target="_blank"><img width="106" height="32" alt="Get the Android App" src="http://static.www.calottery.com/~/media/mobile/GoogleStore.png?w=106&amp;h=32&amp;as=1" style="float: right" /></a>
+    </div>
+    <p>
+      Download our App now </p>
+    		    
+          	</div>
+            <!-- CONNECT WITH US -->
+            <div class='column grid-3 left'>
+               <!--  <p>
+                   <a href="">
+                        <img id="ctl13_WLALogo_Image1" src="" style="border-width:0px;" />
+                    </a> </p>-->
+					 
+		<p>
+      <a href="http://registertovote.ca.gov/" target="_blank">
+        <img width="83" height="35" alt="" border="0" src="http://static.www.calottery.com/~/media/06B2EE7AB75A4FFC84644F42FC10DC99.jpg?w=83&amp;h=35&amp;as=1" /> </a>  <a href="http://saveourwater.com/" target="_blank"><img width="80" height="35" border="0" alt="aewf" src="http://static.www.calottery.com/~/media/D9384AD5687948D98991702CDDEC5BC5.jpg?h=35&amp;w=80&amp;as=1" /></a><a href="http://saveourwater.com/" target="_blank"></a></p>
+    <p>
+      <a href="http://www.californialottery.com/Responsible%20Gaming/Level%20Four%20Certified" target="_blank">
+        <img border="0" alt="WLA Certification" src="http://static.www.calottery.com/~/media/footer_pages/WLALevel4.png" />
+      </a> </p>	
+               
+				
+            </div>
+            <div class='row' id='footer-notices'>
+                <a href="/" id='footer-logo' style="background: url('http://static.www.calottery.com/~/media/HomePage/logo 175x84 with trademark.png') " >CA Lottery Home</a>
+                
+		<p>
+       <a href="/terms-of-service">Terms of Service</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a> | <a href="/contact-us/contact-us-faqs">FAQs</a> <a class="play-responsibly" href="http://www.californialottery.com/Responsible%20Gaming"><img width="100" height="51" title="Play Responsibly.  18 and over. " border="0" alt="Play Responsibly.  18 and over. " src="http://static.www.calottery.com/~/media/7986DCA7A3004924ABDC3C6C05BEBAC3.png?w=100&amp;h=51&amp;as=1" /></a></p>
+
+            </div>
+        </div>
+    </div>
+    <div class='page'>
+        
+		<p id="footer-links">
+      <span>©2017 California State Lottery</span> | <a href="http://gov.ca.gov/" target="_blank">Governor Edmund G. Brown Jr.</a> | <a href="http://www.ca.gov/" target="_blank">State of California</a> | <a href="http://www.problemgambling.ca.gov/" target="_blank">Problem Gambling Treatment</a></p>
+
+    </div>
+	 
+
+</footer>
+
+
+        
+        <input type="hidden" name="hLOCAL_ADDR" id="hLOCAL_ADDR" value="10.1.1.7" />
+        
+                <div id="session_timeout" class="lightbox" title="Are You Still There?">
+                    <p>Your session has timed out due to inactivity. This helps to ensure that your information remains safe.</p> <p>If you want to submit codes into a 2nd Chance draw, you’ll need to sign in again.</p>
+                    <p class="confirmation"><a href="#" class="button-blue close"><span><span>OK</span></span></a></p>
+                </div>
+            
+        <div id="upRequestVerificationEmail">
+	
+                <div id="pnlRequestVerificationEmail">
+		
+                    <input type="submit" name="verfEmailUpdate" value="" id="verfEmailUpdate" style="visibility: hidden;" />
+                    <div id="verfEmail" class="lightbox" title="NEW VERIFICATION EMAIL SENT">
+                        <p>New verification email has been requested to be sent to </p>
+                        <p class="confirmation">
+                            <button class="button-blue close"><span><span>Close</span></span></button>
+                        </p>
+                    </div>
+                
+	</div>
+            
+</div>
+
+        
+        <input name="ChromeCutOffVersion" type="hidden" id="ChromeCutOffVersion" value="18" />
+        <input name="FirefoxCutOffVersion" type="hidden" id="FirefoxCutOffVersion" value="5" />
+        <input name="SafariCutOffVersion" type="hidden" id="SafariCutOffVersion" value="5" />
+        <input name="IECutOffVersion" type="hidden" id="IECutOffVersion" value="8" />
+        
+
+
+<div class="lightbox browser-modal" title="IMPROVE YOUR EXPERIENCE">
+	<h1>Time for an update!</h1>
+	
+		<p>The California Lottery wants you to have the very best possible experience at calottery.com.</p>
+    <p>You may want to update your browser to the most current version to insure that you can enjoy all the features on this site.</p>
+	
+	<div class="browser-single">
+		<p>You are currently using</p>
+		<div class="ieonly" style="display:none;"><p class="version"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-ie.png" alt="Internet Explorer" width="110" height="110" />Internet Explorer  <span class="currversion"  id="ieversionnumber"></span></p></div>
+		<div class="ffonly" style="display:none;"><p class="version"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-firefox.png" alt="Mozilla Firefox" width="110" height="110" />Firefox <span id="ffversionnumber" class="currversion"></span></p></div>
+		<div class="chromeonly" style="display:none;"><p class="version"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-chrome.png" alt="Google Chrome" width="110" height="110" />Chrome <span  class="currversion"  id="chromeversionnumber" /></p></div>
+		<div class="safarionly" style="display:none;"><p class="version"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-safari.png" alt="Safari" width="110" height="110" />Safari <span  class="currversion"   id="safariversionnumber" /></p></div>
+	</div>
+
+	<div>
+		<div class="ieonly" style="display:none;">
+			<p>There is a newer version of Internet Explorer. <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" class="button-orange" target="_blank"><span><span>Update Now</span></span></a>
+			</p>
+		</div>
+		<div class="ffonly" style="display:none;">
+			<p>There is a newer version of Firefox. <a href="https://support.mozilla.org/en-US/kb/update-firefox-latest-version" class="button-orange" target="_blank"><span><span>Update Now</span></span></a>
+			</p>
+		</div>
+		<div class="chromeonly" style="display:none;">
+			<p>There is a newer version of Chrome. <a href="https://www.google.com/intl/en/chrome/browser/" class="button-orange" target="_blank"><span><span>Update Now</span></span></a>
+			</p>
+		</div>
+		<div class="safarionly" style="display:none;" >
+			<p>There is a newer version of Safari. <a href="http://www.apple.com/support/mac-apps/safari/" class="button-orange" target="_blank"><span><span>Update Now</span></span></a>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="lightbox browser-multiple-modal" title="IMPROVE YOUR EXPERIENCE">
+	<h1>We're sorry.  We don't support your browser!</h1>
+	
+		<p>The California Lottery wants you to have the very best possible experience at calottery.com. We suggest you use one of the supported browsers listed below to enjoy all the features on this site.</p>
+    <p>If you choose to download a new internet browser, please select one of the following browsers to download.</p>
+	<div class="browser-multiple">
+		<ul class="clearfix">
+			<li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" class="button-orange" target="_blank"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-ie.png" alt="Internet Explorer" width="110" height="110" />Internet Explorer</a></li>
+			<li><a href="https://support.mozilla.org/en-US/kb/update-firefox-latest-version" class="button-orange" target="_blank"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-firefox.png" alt="Mozilla Firefox" width="110" height="110" />Mozilla Firefox</a></li>
+			<li><a href="https://www.google.com/intl/en/chrome/browser/" class="button-orange" target="_blank"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-chrome.png" alt="Google Chrome" width="110" height="110" />Google Chrome</a></li>
+			<li><a href="http://www.apple.com/support/mac-apps/safari/" class="button-orange" target="_blank"><img src="http://static.www.calottery.com/~/media/Browser logos/browser-safari.png" alt="Safari" width="110" height="110" />Safari</a></li>
+		</ul>
+	</div>
+</div>
+        
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    <script type='text/javascript'>var ebRand = Math.random()+'';ebRand = ebRand * 1000000;document.write('<scr'+'ipt src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=1104105&amp;rnd=' + ebRand + '"></scr' + 'ipt>');</script><noscript><img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=1104105&amp;ns=1"/></noscript>
+    <script type="text/javascript">    Sys.Browser.WebKit = {};
+        if (navigator.userAgent.indexOf('WebKit/') > -1) {
+            Sys.Browser.agent = Sys.Browser.WebKit;
+            Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+            Sys.Browser.name = 'WebKit';
+        }</script>
+    <script type="text/javascript">
+        var CALOTTERY = {
+            config: {
+                // Minimum duration in milliseconds between current draw requests.
+                currentDrawMinimumWaitInterval: 10000,
+                // Duration in milliseconds to try fetching draw results again after an error. 
+                currentDrawRetryInterval: 5000 ,
+                animation: {
+                    // Duration of the initial fade-in of the grid of hotspots in milliseconds.
+                    initialFadeInDuration: 1000 ,
+                    // Duration the loading message is visible post-fade-in and pre-fade-out.
+                    loadingMessageShowDuration: 1500 ,
+                    // Duration used when the loading message is either faded in or out.
+                    loadingMessageFadeDuration: 250 ,
+                    // Duration of the animation of each winning spot in milliseconds.
+                    // If this is 0, winning spots will be displayed on the initial fade in.
+                    spotShowInterval: 0 
+                },
+                api: {
+                    currentDraw: "http://scalecalservice.calottery.com/api/v1.5/drawgames/22?drawscount=1" // Current draw results endpoint
+                }
+            }
+        };
+
+        require(["order!jquery","order!jqueryui","modules/global","modules/calottery.browserDetect"]);
+
+        require(['jquery'], function($){
+            if(navigator.userAgent.match(/Android/i)) {
+                $('body').addClass('android');
+            } else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
+                $('html,body').addClass('ios');
+            }
+        });
+
+        function endRequestHandler(sender, args) {
+            var $select = jQuery(".game-bar-pick");
+
+            if ($select.length > 0) {
+                $select.bind('fixGameBarEvent', function (e) {
+                    if (jQuery('.ui-selectmenu-status').length <= 0) {
+                        try {
+                            $select.selectmenu({ style: 'dropdown' });
+                        } catch (e) { }
+                    }
+                });
+
+                $select.trigger('fixGameBarEvent');
+            }
+        }
+        window.timeOut = 0;
+        window.redir = "/sign-in?redir={0}&timeout=true";
+        window.reqAuth = "False".toLowerCase();
+        /* //siteurl.com/sign-in?redir=/path/to/page&timeout=true */
+        window.timeOutScr = function () {
+            if(window.reqAuth == 'true') {
+                var loc = window.location.host;
+                var newLoc = window.location.protocol + '//' + loc + '/sign-in' + redir;
+                window.location = newLoc;
+            } else {
+                if (window.location.search.indexOf('timeout') <0) {
+                    window.reloadLoc = document.location.pathname + addUrlParam(document.location.search, 'timeout', 'true');
+                    window.location = window.reloadLoc;
+                } else {
+                    window.location.reload();
+                }
+            }
+        }
+        if (window.timeOut != 0) {
+            setTimeout(window.timeOutScr,window.timeOut);
+        }
+
+        try {
+            //if(typeof Sys.WebForms == "undefined")  throw new Error('Sys.WebForms is undefined');
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequestHandler);
+        } catch(e){}
+
+        /**
+        * Add a URL parameter (or changing it if it already exists)
+        * @param {search} string  this is typically document.location.search
+        * @param {key}    string  the key to set
+        * @param {val}    string  value 
+        */
+        var addUrlParam = function(search, key, val){
+            var newParam = key + '=' + val,
+                params = '?' + newParam;
+
+            // If the "search" string exists, then build params from it
+            if (search) {
+                // Try to replace an existance instance
+                params = search.replace(new RegExp('[\?&]' + key + '[^&]*'), '$1' + newParam);
+
+                // If nothing was replaced, then add the new param to the end
+                if (params === search) {
+                    params += '&' + newParam;
+                }
+            }
+
+            return params;
+        };
+    </script>
+    <script type="text/javascript">
+        var _gaq = [["_setAccount", "UA-576767-1"], ["_setDomainName", "none"], ["_setAllowLinker", true], ["_trackPageview"]];
+        (function (d, t) {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
+            g.src = ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g, s)
+        } (document, "script"));
+ 
+   </script>
+</body>
+</html>
